@@ -3,7 +3,7 @@
 
 Um sistema de recomendação de animes utilizando como base o algoritmo KNearestNeighbors e uma base de dado extraída do site MyAnimeList (MAL). A base de dados foi coletada e disponibilizada publicamente no Kaggle: 
 
-- https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews
+- [Anime Recommendation Database 2020](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020)
 
 A base contém 3 datasets cobrindo os _**usuários**_, as _**reviews**_ dos animes e a base de _**animes**_ cadastrada no site. A base de dados está atualizada contendo informações até o ano de 2020.
 
