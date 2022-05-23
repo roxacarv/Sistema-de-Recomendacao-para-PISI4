@@ -1,0 +1,53 @@
+#wb-title {
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#wb-title h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3rem;
+}
+
+#search-area {
+    text-align: center;
+    margin: 0 auto;
+    top: 0;
+    right: 50%;
+}
+
+#search-area input[type="text"] {
+    width: 580px;
+    height: 35px;
+    font-family: 'Signika', sans-serif;
+    font-size: 1.15rem;
+}
+
+#search-area button {
+    width: 170px;
+    height: 40px;
+    font-family: 'Signika', sans-serif;
+    font-size: 1.2rem;
+    border: 2px dotted #000;
+    background-color: lightsalmon;
+    color: lightcyan;
+    font-variant: small-caps;
+}
+
+#anime-list-recommended {
+    margin: 0 auto;
+}
+
+#anime-list-recommended #anime-tbl table {
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-family: 'Signika', sans-serif;
+}
+
+#anime-list-recommended #anime-tbl table thead {
+    margin: 0 auto;
+    font-size: 2.9rem;
+    font-variant: small-caps;
+    font-family: 'Signika', sans-serif;
+}

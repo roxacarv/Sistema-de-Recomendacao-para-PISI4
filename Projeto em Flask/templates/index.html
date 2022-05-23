@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <title>Sistema de Recomendação de Animes</title>
+</head>
+
+<body> 
+    <div id="wb-title">
+        <h1 id="wb-title-text">{{index_title}}</h1>
+    </div>
+    <div id="search-area">
+        <form action="{{url_for('index')}}" method="POST">
+            <input type="text" id="anime-searcher" name="anime-searcher" placeholder="Digite o nome de um anime" />
+            <button id="recommend-btn">me recomende</button>
+        </form>
+    </div>
+    <script>
+        fetch('/data/anime-list').then(function(res) {
+            return res.json()
+        }).then(function(json) {
+            $("#anime-searcher").autocomplete({
+                source: json
+            });
+        }).catch(function(err) {
+            console.log(err.message)
+        })
+    </script>
+</html>
